@@ -1,6 +1,8 @@
 
 import './App.css';
 import { FilePicker } from "./functional_components/file_picker";
+import { ImgComponent } from './functional_components/img_component';
+
 
 
 function App() {
@@ -15,33 +17,7 @@ function App() {
       <div>
         body
         <div className='container'>
-          <span className='mockphoto'>
-            span1
-          </span>
-          <span className='mockphoto'>
-            span2
-          </span>
-          <span className='mockphoto'>
-            span3
-          </span>
-          <span className='mockphoto'>
-            span1
-          </span>
-          <span className='mockphoto'>
-            span2
-          </span>
-          <span className='mockphoto'>
-            span3
-          </span>
-          <span className='mockphoto'>
-            span1
-          </span>
-          <span className='mockphoto'>
-            span2
-          </span>
-          <span className='mockphoto'>
-            span3
-          </span>
+          <ImgComponent />
         </div>
       </div>
       <div>
