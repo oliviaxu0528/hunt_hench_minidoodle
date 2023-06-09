@@ -1,7 +1,5 @@
-export function ImgComponent() {
+export function ImgComponent(props) {
     return (
-        <span className="mockphoto">
-            mocked
-        </span>
+        <img src={props.url} className="mockphoto" alt="joel is smart and hunt is cute" />
     )
 }
