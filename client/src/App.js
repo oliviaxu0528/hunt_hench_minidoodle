@@ -1,14 +1,30 @@
 
+import { useEffect, useState } from 'react';
 import './App.css';
 import { FilePicker } from "./functional_components/file_picker";
 import { ImgComponent } from './functional_components/img_component';
-
+import axios from "axios";
 
 
 function App() {
-  const urls = [
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Golden_Doodle_Standing_%28HD%29.jpg/1200px-Golden_Doodle_Standing_%28HD%29.jpg"
-    , 2, 3, 4, 5]
+  const [urls, setUrls] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:3001')
+      .then(function (response) {
+        // handle success
+        setUrls(response.data)
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
+  }, [])
+
   return (
     <div>
       <div className='container'>hello world!
