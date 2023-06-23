@@ -18,7 +18,6 @@ function App() {
         <span>4</span>
         <span>5</span>
         <span>6</span>
-
       </div>
       <FilePicker />
       <div>
